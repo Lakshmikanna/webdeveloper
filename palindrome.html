@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <label>enter a number</label>
+        <input type="text" id="number">
+        <br><br>
+        <input type="button" onclick="displaynumber()" value="palindrome">
+        <p id="output"></p>
+        <script>
+            function displaynumber()
+            {
+                number=parseInt(document.getElementById("number").value)
+                reservenumber=0;
+                temp=number
+                while(number>0){
+                    reversenumber=reversenumber*10+(number%10);
+                    number=Math.floor(number/10);
+
+                }
+                document.getElementById("output").innerHTML=reversenumber;
+                if(reversenumber==temp)
+                {
+                    document.getElementById("output").innerHTML="palindrome"+reversenumber
+                }
+                else
+                {
+                    document.getElementById("output").innerHTML=" not palindrome"+reversenumber
+                }
+                }
+            
+        </script>
+        </body>
+        </html>
